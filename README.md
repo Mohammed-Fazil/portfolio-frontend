@@ -1,16 +1,79 @@
-# React + Vite
+# Mohammed Fazil — Software Engineer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A clean and responsive portfolio website built with React and Vite.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React
+- Vite
+- JavaScript
+- CSS
+- Lucide React
+- React Icons
 
-## React Compiler
+## Running Locally
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Clone the repository:
 
-## Expanding the ESLint configuration
+```bash
+git clone <repository-url>
+cd <repository-directory>
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Create a production build:
+
+```bash
+npm run build
+```
+
+Preview the production build:
+
+```bash
+npm run preview
+```
+
+## Project Structure
+
+```text
+src/
+├── assets/
+├── components/
+├── sections/
+├── App.jsx
+├── main.jsx
+└── index.css
+```
+
+The application is built using reusable React components and responsive CSS.
+
+## Deployment
+
+The portfolio is a Vite-based frontend and can be deployed to static hosting platforms such as Vercel, Netlify, or Render.
+
+Build the application with:
+
+```bash
+npm run build
+```
+
+The production files are generated in:
+
+```text
+dist/
+```
+
+---
+
+Built with React and Vite.
