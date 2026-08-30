@@ -11,9 +11,7 @@ function Navbar() {
   return (
     <header className="navbar">
       <div className="navbar-container">
-
-        {/* Logo */}
-        <a href="/" className="navbar-logo">
+        <a href="#home" className="navbar-logo" onClick={closeMenu}>
           MF
         </a>
 
@@ -32,35 +30,34 @@ function Navbar() {
           aria-label={menuOpen ? "Close menu" : "Open menu"}
           aria-expanded={menuOpen}
         >
-          {menuOpen ? (
-            <X size={24} strokeWidth={2} />
-          ) : (
-            <Menu size={24} strokeWidth={2} />
-          )}
-        </button>
+          <span className={`menu-icon ${menuOpen ? "open" : ""}`}>
+            <Menu size={25} strokeWidth={1.8} />
+          </span>
 
+          <span className={`close-icon ${menuOpen ? "open" : ""}`}>
+            <X size={25} strokeWidth={1.8} />
+          </span>
+        </button>
       </div>
 
       {/* Mobile Navigation */}
-      {menuOpen && (
-        <nav className="mobile-nav">
-          <a href="#about" onClick={closeMenu}>
-            About
-          </a>
+      <nav className={`mobile-nav ${menuOpen ? "mobile-nav-open" : ""}`}>
+        <a href="#about" onClick={closeMenu}>
+          About
+        </a>
 
-          <a href="#projects" onClick={closeMenu}>
-            Projects
-          </a>
+        <a href="#projects" onClick={closeMenu}>
+          Projects
+        </a>
 
-          <a href="#experience" onClick={closeMenu}>
-            Experience
-          </a>
+        <a href="#experience" onClick={closeMenu}>
+          Experience
+        </a>
 
-          <a href="#contact" onClick={closeMenu}>
-            Contact
-          </a>
-        </nav>
-      )}
+        <a href="#contact" onClick={closeMenu}>
+          Contact
+        </a>
+      </nav>
     </header>
   );
 }

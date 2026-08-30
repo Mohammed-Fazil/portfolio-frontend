@@ -1,21 +1,17 @@
 import Navbar from "./components/Navbar";
+import Hero from "./sections/Hero";
 
 function App() {
   return (
-    <>
-      <Navbar />
+    <div className="app">
+      <div className="portfolio-shell">
+        <Navbar />
 
-      <main>
-        <section
-          style={{
-            minHeight: "100vh",
-            padding: "100px 24px",
-          }}
-        >
-          <h1>Mohammed Fazil</h1>
-        </section>
-      </main>
-    </>
+        <main>
+          <Hero />
+        </main>
+      </div>
+    </div>
   );
 }
 
