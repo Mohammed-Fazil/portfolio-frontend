@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap");
-
 /* =================================
    Base
 ================================= */
@@ -1007,7 +1005,6 @@ img {
    Mobile
 ================================= */
 
-
 /* =================================
    Experience
 ================================= */
@@ -1402,7 +1399,6 @@ img {
   font-size: 11px;
   text-align: right;
 }
-
 
 @media (max-width: 768px) {
   :root {
@@ -1942,7 +1938,6 @@ img {
   }
 }
 
-
 /* =================================
    Small phones
 ================================= */
@@ -2097,4 +2092,47 @@ img {
 }
 
 /* Keep Projects as a single column on mobile */
+/* =================================
+   Custom Cursor
+================================= */
 
+@media (min-width: 769px) {
+  body {
+    cursor: none;
+  }
+
+  a,
+  button,
+  [role="button"] {
+    cursor: none;
+  }
+
+  .custom-cursor {
+    position: fixed;
+
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+
+    background: var(--color-primary);
+
+    pointer-events: none;
+
+    z-index: 9999;
+
+    transform: translate(-50%, -50%);
+
+    transition:
+      width 0.2s ease,
+      height 0.2s ease,
+      opacity 0.2s ease;
+  }
+
+  .custom-cursor.hover {
+    width: 20px;
+    height: 20px;
+
+    opacity: 0.75;
+  }
+}

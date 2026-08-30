@@ -6,7 +6,7 @@ function Experience() {
       number: "01",
       role: "Software Engineer",
       company: "Capgemini",
-      duration: "2 years 2 months",
+      duration: "2 years 1 months",
       period: "Jun 2024 — Jul 2026",
     },
     {
