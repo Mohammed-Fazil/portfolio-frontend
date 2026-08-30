@@ -176,7 +176,7 @@
 
   display: grid;
 
-  grid-template-columns: 1fr 0.9fr;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
 
   align-items: center;
 
@@ -223,13 +223,35 @@
 .hero-title {
   margin: 0;
 
-  color: #0f1b35;
+  color: var(--color-text);
 
-  font-size: clamp(64px, 6vw, 88px);
+  font-size: clamp(52px, 5vw, 72px);
+  font-weight: 700;
 
-  line-height: 0.98;
+  line-height: 1.02;
+  letter-spacing: -0.045em;
+}
+.hero-title::after {
+  content: "";
 
-  letter-spacing: -0.055em;
+  display: block;
+
+  width: 48px;
+  height: 4px;
+
+  margin-top: 24px;
+
+  border-radius: 999px;
+
+  background: var(--color-primary);
+}
+
+.hero-name {
+  display: block;
+
+  color: var(--color-primary);
+
+  margin-top: 6px;
 }
 
 .hero-description {
@@ -391,7 +413,7 @@
 
   display: block;
 
-  width: min(620px, 115%);
+  width: min(560px, 110%);
 
   height: auto;
 
@@ -437,6 +459,88 @@
   border: 2px solid #6577b8;
 
   border-radius: 12px;
+}
+
+/* =================================
+   Technology Stack
+================================= */
+
+.tech-stack {
+  width: 100%;
+
+  padding: 20px 0 40px;
+}
+
+.tech-stack-container {
+  width: min(
+    calc(100% - (var(--container-padding) * 2)),
+    var(--container-width)
+  );
+
+  min-height: 72px;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 55px;
+
+  padding: 14px 28px;
+
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, 0.75);
+
+  box-shadow: 0 8px 25px rgba(30, 41, 59, 0.05);
+
+  backdrop-filter: blur(10px);
+}
+
+.tech-item {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  white-space: nowrap;
+
+  color: var(--color-text);
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.tech-icon {
+  width: 24px;
+  height: 24px;
+}
+.tech-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.microservices-icon {
+  color: var(--color-primary);
+}
+
+.java-icon {
+  color: #e76f00;
+}
+
+.spring-icon {
+  color: #6db33f;
+}
+
+.react-icon {
+  color: #61dafb;
+}
+
+.postgres-icon {
+  color: #336791;
 }
 
 /* =================================
@@ -591,9 +695,20 @@
   }
 
   .hero-title {
-    font-size: clamp(48px, 14vw, 68px);
+    font-size: clamp(42px, 12vw, 58px);
 
-    line-height: 0.98;
+    line-height: 1.02;
+
+    letter-spacing: -0.04em;
+  }
+  .hero-title::after {
+    width: 38px;
+    height: 3px;
+
+    margin: 18px auto 0;
+  }
+  .hero-name {
+    margin-top: 4px;
   }
 
   .hero-description {
@@ -662,7 +777,6 @@
     display: none;
   }
 }
-
 /* =================================
    Small phones
 ================================= */
@@ -1129,5 +1243,33 @@ img {
 
   .mobile-nav a:hover {
     color: var(--color-primary);
+  }
+  .tech-stack {
+    padding: 10px 0 30px;
+  }
+
+  .tech-stack-container {
+    width: calc(100% - 36px);
+
+    min-height: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 12px 8px;
+
+    padding: 16px;
+  }
+
+  .tech-item {
+    justify-content: center;
+
+    font-size: 13px;
+  }
+
+  .tech-icon {
+    width: 21px;
+    height: 21px;
   }
 }

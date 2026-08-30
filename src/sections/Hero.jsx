@@ -9,7 +9,10 @@ function Hero() {
         <div className="hero-content">
           <p className="hero-label">SOFTWARE ENGINEER</p>
 
-          <h1 className="hero-title">Mohammed Fazil</h1>
+          <h1 className="hero-title">
+            Hi, I’m
+            <span className="hero-name">Mohammed Fazil</span>
+          </h1>
 
           <p className="hero-description">
             Software Engineer specializing in Java, Spring Boot, and

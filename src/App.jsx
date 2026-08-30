@@ -1,5 +1,6 @@
 import Navbar from "./components/Navbar";
 import Hero from "./sections/Hero";
+import TechStack from "./sections/TechStack";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
 
         <main>
           <Hero />
+          <TechStack />
         </main>
       </div>
     </div>
