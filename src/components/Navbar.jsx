@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import logo from "../assets/mf-logo.png";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -15,13 +16,14 @@ function Navbar() {
   return (
     <header className="navbar">
       <div className="navbar-container">
+        {/* Brand */}
         <a
           href="#home"
-          className="navbar-logo"
+          className="navbar-brand"
           onClick={closeMenu}
           aria-label="Home"
         >
-          MF
+          <img src={logo} alt="Mohammed Fazil" className="navbar-brand-logo" />
         </a>
 
         {/* Desktop Navigation */}
