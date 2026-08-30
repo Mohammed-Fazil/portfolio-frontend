@@ -15,9 +15,7 @@ function Hero() {
           </h1>
 
           <p className="hero-description">
-            Software Engineer specializing in Java, Spring Boot, and
-            microservices, focused on building scalable and reliable backend
-            systems.
+           Software Engineer experienced in Java, Spring Boot, and microservices, building backend applications.
           </p>
 
           <div className="hero-actions">
