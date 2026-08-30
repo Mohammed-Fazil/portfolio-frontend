@@ -1,7 +1,7 @@
 import Navbar from "./components/Navbar";
 import Hero from "./sections/Hero";
 import TechStack from "./sections/TechStack";
-
+import About from "./sections/About";
 function App() {
   return (
     <div className="app">
@@ -11,6 +11,7 @@ function App() {
         <main>
           <Hero />
           <TechStack />
+          <About />
         </main>
       </div>
     </div>
