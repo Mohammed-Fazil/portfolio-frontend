@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./sections/Hero";
 import TechStack from "./sections/TechStack";
 import About from "./sections/About";
+import Projects from "./sections/Projects";
 function App() {
   return (
     <div className="app">
@@ -12,6 +13,7 @@ function App() {
           <Hero />
           <TechStack />
           <About />
+          <Projects />
         </main>
       </div>
     </div>
