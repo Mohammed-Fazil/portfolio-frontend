@@ -538,7 +538,7 @@ img {
 
   display: block;
 
-  width: min(560px, 110%);
+  width: min(500px, 110%);
 
   height: auto;
 
@@ -546,7 +546,7 @@ img {
 
   object-fit: contain;
 
-  transform: translateY(10px);
+  transform: translateY(18px);
 
   filter: drop-shadow(0 20px 25px rgba(30, 41, 59, 0.1));
 
@@ -1271,7 +1271,6 @@ button,
    Footer
 ================================= */
 
-
 .footer {
   width: 100%;
   padding: 10px 0 20px;
@@ -1579,7 +1578,7 @@ button,
   }
 
   .hero-character-image {
-    width: min(390px, 115%);
+    width: min(350px, 100%);
     max-width: none;
     transform: translateY(0);
   }
@@ -1709,7 +1708,7 @@ button,
   /* Projects */
 
   .projects-section {
-    padding: 45px 0 ;
+    padding: 45px 0;
   }
 
   .projects-heading {
@@ -1761,7 +1760,7 @@ button,
   /* Experience */
 
   .experience-section {
-    padding: 45px 0 ;
+    padding: 45px 0;
   }
   .experience-container {
     width: calc(100% - 40px);
@@ -1831,7 +1830,7 @@ button,
   /* Contact */
 
   .contact-section {
-    padding: 45px 0 ;
+    padding: 45px 0;
   }
 
   .contact-container {
@@ -1960,4 +1959,18 @@ button,
   .custom-cursor {
     display: none;
   }
+}
+
+.project-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 30px;
+  width: 100%;
+}
+
+.project-links .project-github {
+  margin-top: 0;
+  padding-top: 0;
 }

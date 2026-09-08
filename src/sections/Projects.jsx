@@ -2,6 +2,8 @@ import { FileText, Link } from "lucide-react";
 import ProjectCard from "../components/ProjectCard";
 
 function Projects() {
+  const tinyUrlLiveUrl = import.meta.env.VITE_TINYURL_LIVE_URL;
+
   const projects = [
     {
       number: "01",
@@ -12,6 +14,7 @@ function Projects() {
         "A URL shortening service for creating short, easy-to-share links.",
       technologies: ["Java", "Spring Boot", "MongoDB"],
       githubUrl: "https://github.com/Mohammed-Fazil/tinyurl",
+      liveUrl: tinyUrlLiveUrl,
     },
     {
       number: "02",

@@ -1,4 +1,5 @@
 import { FaGithub } from "react-icons/fa";
+import { ExternalLink } from "lucide-react";
 
 function ProjectCard({
   number,
@@ -8,6 +9,7 @@ function ProjectCard({
   description,
   technologies,
   githubUrl,
+  liveUrl,
 }) {
   return (
     <article className="project-card">
@@ -29,17 +31,33 @@ function ProjectCard({
         ))}
       </div>
 
-      <a
-        href={githubUrl}
-        target="_blank"
-        rel="noreferrer"
-        className="project-github"
-        aria-label={`View ${title} on GitHub`}
-      >
-        <FaGithub size={19} />
-        <span>GitHub</span>
-        <span className="project-arrow">↗</span>
-      </a>
+      <div className="project-links">
+        <a
+          href={githubUrl}
+          target="_blank"
+          rel="noreferrer"
+          className="project-github"
+          aria-label={`View ${title} on GitHub`}
+        >
+          <FaGithub size={19} />
+          <span>GitHub</span>
+          <span className="project-arrow">↗</span>
+        </a>
+
+        {liveUrl && (
+          <a
+            href={liveUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="project-github project-live"
+            aria-label={`View ${title} live`}
+          >
+            <ExternalLink size={18} />
+            <span>Live Demo</span>
+            {/* <span className="project-arrow">↗</span> */}
+          </a>
+        )}
+      </div>
     </article>
   );
 }
