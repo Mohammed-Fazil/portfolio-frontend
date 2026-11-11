@@ -1,7 +1,14 @@
+import { lazy, Suspense } from "react";
+
+const Scene3D = lazy(() => import("../components/Scene3D"));
+
 function Hero() {
   return (
     <section className="hero" id="home">
       <div className="hero-ground" aria-hidden="true" />
+      <Suspense fallback={null}>
+        <Scene3D />
+      </Suspense>
 
       <div className="hero-inner wrap-narrow">
         <p className="hero-pill">

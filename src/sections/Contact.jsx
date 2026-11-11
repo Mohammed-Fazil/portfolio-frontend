@@ -143,7 +143,7 @@ function Contact() {
         </p>
 
         <p className="close-foot-built">
-          Built with React, Vite, Geist &amp; Geist Mono
+          Built with React, three.js, Geist &amp; Geist Mono
         </p>
 
         <nav className="close-foot-links" aria-label="Footer">
