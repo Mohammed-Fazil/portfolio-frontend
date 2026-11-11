@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import logo from "../assets/mf-logo.png";
+import logo from "../assets/mf-signature.png";
 
 const links = [
   { href: "#work", label: "Work" },

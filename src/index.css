@@ -164,7 +164,7 @@ img {
   top: 0;
   z-index: 100;
 
-  padding: 14px 24px 10px;
+  padding: 15px 24px 10px;
 
   background: linear-gradient(
     to bottom,
@@ -205,16 +205,10 @@ img {
 }
 
 .nav-mark-logo {
-  width: 42px;
-  height: 42px;
+  height: 32px;
+  width: auto;
 
-  padding: 5px;
-
-  border: 1px solid var(--border);
-  border-radius: 10px;
-
-  background: #f4f7fb;
-  object-fit: contain;
+  display: block;
 }
 
 .nav-mark-name {
