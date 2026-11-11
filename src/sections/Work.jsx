@@ -37,13 +37,14 @@ const roles = [
     company: "Bozhon Precision Industry Technology",
     note: "Shipped client-driven features, defect fixes and production support across industrial automation modules.",
   },
-  {
-    period: "2018 — 2022",
-    role: "B.E. Computer Science & Engineering",
-    company: "C. Abdul Hakeem College of Engineering and Technology",
-    note: "Graduated 2022 — CGPA 8.01 / 10.",
-  },
 ];
+
+const education = {
+  period: "2018 — 2022",
+  role: "B.E. Computer Science & Engineering",
+  company: "C. Abdul Hakeem College of Engineering and Technology",
+  note: "Graduated 2022 — CGPA 8.01 / 10.",
+};
 
 function Work() {
   return (
@@ -126,6 +127,24 @@ function Work() {
                 </div>
               </article>
             ))}
+          </div>
+        </div>
+
+        <div className="work-education">
+          <h3 className="experience-kicker">Education</h3>
+
+          <div className="experience-list">
+            <article className="experience-row">
+              <span className="experience-period">{education.period}</span>
+
+              <div>
+                <p className="experience-role">{education.role}</p>
+
+                <p className="experience-company">{education.company}</p>
+
+                <p className="experience-note">{education.note}</p>
+              </div>
+            </article>
           </div>
         </div>
       </div>

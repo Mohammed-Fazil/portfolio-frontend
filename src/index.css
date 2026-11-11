@@ -34,7 +34,7 @@
   --radius-md: 14px;
   --radius-lg: 20px;
 
-  --section-y: 104px;
+  --section-y: 96px;
 
   color: var(--ink);
   background: var(--bg);
@@ -714,7 +714,7 @@ img {
   align-items: start;
   gap: 28px;
 
-  padding: 26px 0;
+  padding: 18px 0;
 
   border-bottom: 1px solid var(--border);
 
@@ -809,9 +809,13 @@ img {
    Experience — ledger rows inside Work
 ===================================================== */
 
-  .work-experience {
-    margin-top: 36px;
-  }
+.work-experience {
+  margin-top: 44px;
+}
+
+.work-education {
+  margin-top: 28px;
+}
 
 .experience-kicker {
   margin: 0 0 14px;
@@ -830,7 +834,7 @@ img {
 }
 
 .experience-row {
-  padding: 22px 0;
+  padding: 18px 0;
 
   border-bottom: 1px solid var(--border);
 }
@@ -1129,7 +1133,11 @@ img {
   }
 
   .work-experience {
-    margin-top: 96px;
+    margin-top: 28px;
+  }
+
+  .work-education {
+    margin-top: 20px;
   }
 }
 
@@ -1219,7 +1227,7 @@ img {
 @media (max-width: 768px) {
   :root {
     --edge: 20px;
-    --section-y: 64px;
+    --section-y: 56px;
   }
 
   .hero {
@@ -1347,7 +1355,7 @@ img {
     grid-template-columns: minmax(0, 1fr);
     gap: 14px;
 
-    padding: 20px 0;
+    padding: 16px 0;
   }
 
   .work-links {
@@ -1357,7 +1365,7 @@ img {
   }
 
   .experience-row {
-    padding: 18px 0;
+    padding: 14px 0;
   }
 
   .experience-role {
