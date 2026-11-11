@@ -7,18 +7,18 @@ const projects = [
     name: "TinyURL",
     type: "URL shortening service",
     description:
-      "A URL shortening service for creating short, easy-to-share links.",
-    stack: ["Java", "Spring Boot", "MongoDB"],
+      "A URL shortening service with Base62-encoded short codes, JWT-based authentication and centralized exception handling.",
+    stack: ["Java", "Spring Boot", "Spring Security", "MongoDB"],
     githubUrl: "https://github.com/Mohammed-Fazil/tinyurl",
-    liveUrl: import.meta.env.VITE_TINYURL_LIVE_URL,
+    liveUrl: import.meta.env.VITE_TINYURL_LIVE_URL || "https://tinyurl-iota-ruby.vercel.app/",
   },
   {
     index: "02",
     name: "DocFlow",
-    type: "Collaborative document editor",
+    type: "Real-time collaborative document editor",
     description:
-      "A collaborative document editor with real-time editing, document sharing, and role-based access control.",
-    stack: ["React", "Spring Boot", "PostgreSQL", "WebSocket"],
+      "A Google-Docs-style collaborative editor built as microservices — API gateway, Eureka service discovery, and role-based document sharing.",
+    stack: ["Java", "Spring Boot", "React.js", "PostgreSQL"],
     githubUrl: "https://github.com/Mohammed-Fazil/docflow-collaborative-editor",
     liveUrl: null,
   },
@@ -29,13 +29,19 @@ const roles = [
     period: "Jun 2024 — Jul 2026",
     role: "Software Engineer",
     company: "Capgemini",
-    note: "Two years building microservices, REST APIs and real-time features in production teams.",
+    note: "Migrated COBOL and RPG modules to Java on Spring Boot microservices — and built an Agentic-AI code transformation engine (LangGraph, RAG) that cut manual conversion effort by ~90%.",
   },
   {
     period: "Feb 2024 — Jun 2024",
     role: "Junior Software Engineer",
     company: "Bozhon Precision Industry Technology",
-    note: "Four months on internal tooling — my first shipped code under review.",
+    note: "Shipped client-driven features, defect fixes and production support across industrial automation modules.",
+  },
+  {
+    period: "2018 — 2022",
+    role: "B.E. Computer Science & Engineering",
+    company: "C. Abdul Hakeem College of Engineering and Technology",
+    note: "Graduated 2022 — CGPA 8.01 / 10.",
   },
 ];
 

@@ -14,8 +14,8 @@ function Hero() {
         </h1>
 
         <p className="hero-lead">
-          Software engineer at Capgemini — two years of microservices, REST
-          APIs and real-time systems.
+          Software engineer at Capgemini — two and a half years of
+          microservices, REST APIs and real-time systems.
         </p>
 
         <div className="hero-actions">
