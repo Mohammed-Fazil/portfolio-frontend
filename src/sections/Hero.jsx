@@ -1,71 +1,90 @@
-import { ArrowUpRight, Mail } from "lucide-react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import heroCharacter from "../assets/avatar/hero-character.png";
-
 function Hero() {
   return (
     <section className="hero" id="home">
-      <div className="hero-container">
-        <div className="hero-content">
-          <p className="hero-label">MOHAMMED FAZIL</p>
+      <div className="hero-ground" aria-hidden="true" />
 
-          <h1 className="hero-title">
-            I build backend systems
-            <span className="hero-name">
-              with Java &amp; Spring Boot.
-            </span>
-          </h1>
+      <div className="hero-inner wrap-narrow">
+        <p className="hero-pill">
+          <span className="hero-pill-dot" aria-hidden="true" />
+          Mohammed Fazil — open to work
+        </p>
 
-          <p className="hero-description">
-            Software Engineer — 2 years at Capgemini shipping
-            microservices, REST APIs, and real-time applications.
-          </p>
+        <h1 className="hero-title h-display">
+          I build Java backends <em>that hold.</em>
+        </h1>
 
-          <div className="hero-actions">
-            <a href="#projects" className="button button-primary">
-              View Projects
-              <ArrowUpRight size={18} />
-            </a>
+        <p className="hero-lead">
+          Software engineer at Capgemini — two years of microservices, REST
+          APIs and real-time systems.
+        </p>
 
-            <a href="#contact" className="button button-secondary">
-              Contact Me
-              <Mail size={18} />
-            </a>
-          </div>
+        <div className="hero-actions">
+          <a href="#work" className="hero-button hero-button-primary">
+            See the projects
+          </a>
 
-          <div className="hero-socials">
-            <a
-              href="https://www.linkedin.com/in/mohammed-fazil-m-3ba895194/"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="LinkedIn"
-            >
-              <FaLinkedin size={20} />
-            </a>
-
-            <a
-              href="https://github.com/Mohammed-Fazil"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="GitHub"
-            >
-              <FaGithub size={20} />
-            </a>
-
-            <a href="mailto:mothi.mhd.fazil@gmail.com" aria-label="Email">
-              <Mail size={20} />
-            </a>
-          </div>
+          <a href="#contact" className="hero-button hero-button-ghost">
+            Email me
+            <span aria-hidden="true">↗</span>
+          </a>
         </div>
+      </div>
 
-        <div className="hero-character-area">
-          <div className="character-glow" />
+      <div className="hero-frame">
+        <div className="terminal" aria-label="Terminal introducing Mohammed Fazil">
+          <div className="terminal-bar" aria-hidden="true">
+            <span className="terminal-dot terminal-dot-r" />
+            <span className="terminal-dot terminal-dot-y" />
+            <span className="terminal-dot terminal-dot-g" />
+            <span className="terminal-title">mohammed@portfolio: ~</span>
+          </div>
 
-          <img
-            src={heroCharacter}
-            alt="Mohammed Fazil"
-            className="hero-character-image"
-          />
+          <div className="terminal-body">
+            <p className="term-line" style={{ "--d": "0.15s" }}>
+              <span className="term-prompt">$ </span>
+              <span className="term-cmd">whoami</span>
+            </p>
+
+            <p className="term-line" style={{ "--d": "0.75s" }}>
+              <span className="term-out">
+                mohammed-fazil — software engineer · Capgemini
+              </span>
+            </p>
+
+            <p className="term-line" style={{ "--d": "1.35s" }}>
+              <span className="term-prompt">$ </span>
+              <span className="term-cmd">stack --daily</span>
+            </p>
+
+            <p className="term-line" style={{ "--d": "1.95s" }}>
+              <span className="term-out term-out-long">
+                java · spring boot · microservices · postgresql · react ·
+                docker
+              </span>
+              <span className="term-out term-out-short">
+                java · spring boot · microservices · react
+              </span>
+            </p>
+
+            <p className="term-line" style={{ "--d": "2.55s" }}>
+              <span className="term-prompt">$ </span>
+              <span className="term-cmd">ls ~/principles</span>
+            </p>
+
+            <p className="term-line" style={{ "--d": "3.15s" }}>
+              <span className="term-out term-out-long">
+                understand-the-problem&nbsp;&nbsp;design-deliberately&nbsp;&nbsp;build-clear-software
+              </span>
+              <span className="term-out term-out-short">
+                understand · design · build
+              </span>
+            </p>
+
+            <p className="term-line" style={{ "--d": "3.75s" }}>
+              <span className="term-prompt">$ </span>
+              <span className="term-cursor" aria-hidden="true" />
+            </p>
+          </div>
         </div>
       </div>
     </section>

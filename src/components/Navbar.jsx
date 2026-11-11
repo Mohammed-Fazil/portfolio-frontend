@@ -2,83 +2,82 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import logo from "../assets/mf-logo.png";
 
+const links = [
+  { href: "#work", label: "Work" },
+  { href: "#experience", label: "Experience" },
+  { href: "#contact", label: "Contact" },
+];
+
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const closeMenu = () => {
-    setMenuOpen(false);
-  };
-
-  const toggleMenu = () => {
-    setMenuOpen((prev) => !prev);
-  };
+  const closeMenu = () => setMenuOpen(false);
+  const toggleMenu = () => setMenuOpen((prev) => !prev);
 
   return (
-    <header className="navbar">
-      <div className="navbar-container">
-        {/* Brand */}
-        <a
-          href="#home"
-          className="navbar-brand"
-          onClick={closeMenu}
-          aria-label="Home"
-        >
-          <img src={logo} alt="Mohammed Fazil" className="navbar-brand-logo" />
+    <header className="nav">
+      <div className="nav-inner">
+        <a href="#home" className="nav-mark" onClick={closeMenu} aria-label="Home">
+          <img src={logo} alt="Mohammed Fazil" className="nav-mark-logo" />
+
+          <span>
+            <span className="nav-mark-name">Mohammed Fazil</span>
+            <span className="nav-mark-role">Software Engineer</span>
+          </span>
         </a>
 
-        {/* Desktop Navigation */}
-        <nav className="desktop-nav" aria-label="Desktop navigation">
-          <a href="#about">About</a>
-          <a href="#projects">Projects</a>
-          <a href="#experience">Experience</a>
-          <a href="#contact">Contact</a>
+        <nav className="nav-links" aria-label="Primary">
+          {links.map((link) => (
+            <a key={link.href} href={link.href}>
+              {link.label}
+            </a>
+          ))}
         </nav>
 
-        {/* Mobile Menu Button */}
+        <a href="mailto:mothi.mhd.fazil@gmail.com" className="nav-action">
+          Email me
+          <span aria-hidden="true">↗</span>
+        </a>
+
         <button
           type="button"
-          className="mobile-menu-button"
+          className="nav-toggle"
           onClick={toggleMenu}
           aria-label={menuOpen ? "Close menu" : "Open menu"}
           aria-expanded={menuOpen}
-          aria-controls="mobile-navigation"
+          aria-controls="nav-mobile"
         >
-          <span
-            className={`menu-icon ${menuOpen ? "open" : ""}`}
-            aria-hidden="true"
-          >
-            <Menu size={25} strokeWidth={1.8} />
-          </span>
-
-          <span
-            className={`close-icon ${menuOpen ? "open" : ""}`}
-            aria-hidden="true"
-          >
-            <X size={25} strokeWidth={1.8} />
-          </span>
+          {menuOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
       </div>
 
-      {/* Mobile Navigation */}
       <nav
-        id="mobile-navigation"
-        className={`mobile-nav ${menuOpen ? "mobile-nav-open" : ""}`}
+        id="nav-mobile"
+        className={`nav-mobile ${menuOpen ? "nav-mobile-open" : ""}`}
         aria-label="Mobile navigation"
       >
-        <a href="#about" onClick={closeMenu}>
-          About
+        {links.map((link) => (
+          <a key={link.href} href={link.href} onClick={closeMenu}>
+            {link.label}
+          </a>
+        ))}
+
+        <a
+          href="https://github.com/Mohammed-Fazil"
+          target="_blank"
+          rel="noreferrer"
+          onClick={closeMenu}
+        >
+          GitHub
         </a>
 
-        <a href="#projects" onClick={closeMenu}>
-          Projects
-        </a>
-
-        <a href="#experience" onClick={closeMenu}>
-          Experience
-        </a>
-
-        <a href="#contact" onClick={closeMenu}>
-          Contact
+        <a
+          href="https://www.linkedin.com/in/mohammed-fazil-m-3ba895194/"
+          target="_blank"
+          rel="noreferrer"
+          onClick={closeMenu}
+        >
+          LinkedIn
         </a>
       </nav>
     </header>

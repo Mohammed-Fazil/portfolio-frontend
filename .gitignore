@@ -61,3 +61,5 @@ coverage/
 # Temporary files
 *.tmp
 *.temp
+.taste-skill/
+shots/
