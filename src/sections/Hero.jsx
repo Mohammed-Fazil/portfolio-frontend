@@ -7,15 +7,18 @@ function Hero() {
     <section className="hero" id="home">
       <div className="hero-container">
         <div className="hero-content">
-          <p className="hero-label">SOFTWARE ENGINEER</p>
+          <p className="hero-label">MOHAMMED FAZIL</p>
 
           <h1 className="hero-title">
-            Hi, I’m
-            <span className="hero-name">Mohammed Fazil</span>
+            I build backend systems
+            <span className="hero-name">
+              with Java &amp; Spring Boot.
+            </span>
           </h1>
 
           <p className="hero-description">
-           Software Engineer experienced in Java, Spring Boot, and microservices, building backend applications.
+            Software Engineer — 2 years at Capgemini shipping
+            microservices, REST APIs, and real-time applications.
           </p>
 
           <div className="hero-actions">

@@ -6,24 +6,21 @@ import Projects from "./sections/Projects";
 import Experience from "./sections/Experience";
 import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
-import CustomCursor from "./components/CustomCursor";
+
 function App() {
   return (
     <div className="app">
-      <CustomCursor />
-      <div className="portfolio-shell">
-        <Navbar />
+      <Navbar />
 
-        <main>
-          <Hero />
-          <TechStack />
-          <About />
-          <Projects />
-          <Experience />
-          <Contact />
-        </main>
-        <Footer />
-      </div>
+      <main>
+        <Hero />
+        <TechStack />
+        <About />
+        <Projects />
+        <Experience />
+        <Contact />
+      </main>
+      <Footer />
     </div>
   );
 }

@@ -1,27 +1,51 @@
 import { FaGithub } from "react-icons/fa";
 import { ExternalLink } from "lucide-react";
 
+function CodeLine({ tokens }) {
+  return (
+    <>
+      {tokens.map((token, index) => (
+        <span key={index} className={token.k ? `tok-${token.k}` : undefined}>
+          {token.s}
+        </span>
+      ))}
+      {"\n"}
+    </>
+  );
+}
+
 function ProjectCard({
   number,
-  icon: Icon,
   title,
   type,
   description,
   technologies,
   githubUrl,
   liveUrl,
+  visual,
 }) {
   return (
     <article className="project-card">
-      <div className="project-icon">
-        <Icon size={28} strokeWidth={1.7} />
+      <div className="project-visual" aria-hidden="true">
+        <div className="project-visual-bar">
+          <span className="project-visual-dot" />
+          <span className="project-visual-dot" />
+          <span className="project-visual-dot" />
+          <span className="project-visual-file">{visual.file}</span>
+        </div>
+
+        <pre>
+          <code>
+            {visual.lines.map((tokens, index) => (
+              <CodeLine key={index} tokens={tokens} />
+            ))}
+          </code>
+        </pre>
       </div>
 
-      <span className="project-number">{number}</span>
+      <span className="project-meta">{number} — {type}</span>
 
       <h3 className="project-title">{title}</h3>
-
-      <p className="project-type">{type}</p>
 
       <p className="project-description">{description}</p>
 
@@ -39,8 +63,8 @@ function ProjectCard({
           className="project-github"
           aria-label={`View ${title} on GitHub`}
         >
-          <FaGithub size={19} />
-          <span>GitHub</span>
+          <FaGithub size={18} />
+          <span>Source code</span>
           <span className="project-arrow">↗</span>
         </a>
 
@@ -49,12 +73,12 @@ function ProjectCard({
             href={liveUrl}
             target="_blank"
             rel="noreferrer"
-            className="project-github project-live"
+            className="project-github"
             aria-label={`View ${title} live`}
           >
-            <ExternalLink size={18} />
-            <span>Live Demo</span>
-            {/* <span className="project-arrow">↗</span> */}
+            <ExternalLink size={17} />
+            <span>Live demo</span>
+            <span className="project-arrow">↗</span>
           </a>
         )}
       </div>
