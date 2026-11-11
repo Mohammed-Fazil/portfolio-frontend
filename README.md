@@ -1,24 +1,23 @@
 # Mohammed Fazil — Software Engineer Portfolio
 
-A clean and responsive portfolio website built with React and Vite.
+A dark, developer-themed portfolio built with React, Vite, and three.js — centred headline over a looping terminal, an editorial work ledger, and a microservices constellation rendered behind the hero.
 
 ## Tech Stack
 
-- React
-- Vite
-- JavaScript
-- CSS
-- Lucide React
-- React Icons
+- React 19
+- Vite 8
+- three.js (lazy-loaded scene)
+- Plain CSS (design tokens, no framework)
+- Geist & Geist Mono
+- Lucide React, React Icons
+
+## Sections
+
+- **Hero** — name, headline, and a live terminal window over a drifting three.js constellation of service nodes
+- **Work** — selected projects (TinyURL, DocFlow) and an experience ledger
+- **Contact** — dark closing band with links and colophon
 
 ## Running Locally
-
-Clone the repository:
-
-```bash
-git clone <repository-url>
-cd <repository-directory>
-```
 
 Install dependencies:
 
@@ -32,48 +31,37 @@ Start the development server:
 npm run dev
 ```
 
-Create a production build:
+Lint and build:
 
 ```bash
+npm run lint
 npm run build
-```
-
-Preview the production build:
-
-```bash
-npm run preview
 ```
 
 ## Project Structure
 
 ```text
 src/
-├── assets/
-├── components/
-├── sections/
+├── assets/          # logo, favicon
+├── components/      # Navbar, Scene3D (three.js constellation)
+├── sections/        # Hero, Work, Contact
 ├── App.jsx
 ├── main.jsx
-└── index.css
+└── index.css        # full design system (tokens, sections, motion)
 ```
 
-The application is built using reusable React components and responsive CSS.
+## Notes
+
+- The three.js scene is code-split into its own chunk and respects `prefers-reduced-motion`, pauses when the tab is hidden, and caps pixel ratio for high-DPI screens.
 
 ## Deployment
 
-The portfolio is a Vite-based frontend and can be deployed to static hosting platforms such as Vercel, Netlify, or Render.
-
-Build the application with:
+A static Vite build — deploy the `dist/` folder to Vercel, Netlify, or any static host:
 
 ```bash
 npm run build
 ```
 
-The production files are generated in:
-
-```text
-dist/
-```
-
 ---
 
-Built with React and Vite.
+Built with React, three.js, Geist & Geist Mono.
